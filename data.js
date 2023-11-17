@@ -1,9 +1,5 @@
-const choices = [
-    "Stack",
-    "10",
-    "200",
-    "50",
-    "100",
-    "5",
-    "500"
-]
+// 1 ligne = 1 choice
+const choices = `
+Coder avec Chat GPT
+Sous titres auto live
+`

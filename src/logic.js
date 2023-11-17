@@ -1,3 +1,5 @@
+const choicesFormated = choices.split("\n").filter((str) => str.length > 0)
+
 const sectorsColors = [
     "#f82",
     "#0bf",
@@ -10,13 +12,13 @@ const sectorsColors = [
 
 // Map choices to colors
 const sectors = []
-for (let index = 0; index < choices.length; index++) {
-    const choice = choices[index];
+for (let index = 0; index < choicesFormated.length; index++) {
+    const choice = choicesFormated[index];
     let colorIndex = index % sectorsColors.length
 
     // make sure there is not twice the same color
     if (
-        (index == choices.length - 1) &&
+        (index == choicesFormated.length - 1) &&
         (colorIndex == 0)
     ){
         colorIndex = 1 % sectorsColors.length
@@ -24,7 +26,7 @@ for (let index = 0; index < choices.length; index++) {
 
     const sector = {
         color:sectorsColors[colorIndex],
-        label:choice
+        label:choice.trim()
     }
     sectors.push(sector)
 }
@@ -69,7 +71,7 @@ const drawSector = (sector, i) => {
     ctx.rotate(ang + arc / 2);
     ctx.textAlign = "right";
     ctx.fillStyle = "#fff";
-    ctx.font = "bold 30px sans-serif";
+    ctx.font = "bold 35px sans-serif";
     ctx.fillText(sector.label, rad - 10, 10);
     //
     ctx.restore();
