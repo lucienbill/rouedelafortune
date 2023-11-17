@@ -1,14 +1,3 @@
-
-const choices = [
-    "Stack",
-    "10",
-    "200",
-    "50",
-    "100",
-    "5",
-    "500"
-]
-
 const sectorsColors = [
     "#f82",
     "#0bf",
@@ -30,7 +19,7 @@ for (let index = 0; index < choices.length; index++) {
         (index == choices.length - 1) &&
         (colorIndex == 0)
     ){
-        colorIndex = 1
+        colorIndex = 1 % sectorsColors.length
     }
 
     const sector = {
