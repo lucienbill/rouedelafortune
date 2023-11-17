@@ -1,14 +1,23 @@
+#container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 #wheelOfFortune {
     display: inline-flex;
     position: relative;
     overflow: hidden;
-  }
+}
   
-  #wheel {
+#wheel {
     display: block;
-  }
+}
   
-  #spin {
+#spin {
     font: 1.5rem/0 sans-serif;
     user-select: none;
     cursor: pointer;
@@ -18,21 +27,21 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 30%;
-    height: 30%;
-    margin: -15%;
+    width: 10%;
+    height: 10%;
+    margin: -5%;
     background: #fff;
     color: #fff;
     box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
     border-radius: 50%;
     transition: 0.8s;
-  }
-  
-  #spin::after {
+}
+
+#spin::after {
     content: "";
     position: absolute;
     top: -17px;
     border: 10px solid transparent;
     border-bottom-color: currentColor;
     border-top: none;
-  }
+}

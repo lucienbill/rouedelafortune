@@ -1,51 +1,16 @@
 <!-- Source: https://stackoverflow.com/questions/33850201/how-to-draw-a-wheel-of-fortune -->
 <html><head>
-    <style>
-        #wheelOfFortune {
-  display: inline-flex;
-  position: relative;
-  overflow: hidden;
-}
-
-#wheel {
-  display: block;
-}
-
-#spin {
-  font: 1.5rem/0 sans-serif;
-  user-select: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 30%;
-  height: 30%;
-  margin: -15%;
-  background: #fff;
-  color: #fff;
-  box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
-  border-radius: 50%;
-  transition: 0.8s;
-}
-
-#spin::after {
-  content: "";
-  position: absolute;
-  top: -17px;
-  border: 10px solid transparent;
-  border-bottom-color: currentColor;
-  border-top: none;
-}
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div id="wheelOfFortune">
-  <canvas id="wheel" width="300" height="300" style="transform: rotate(0.890218rad);"></canvas>
-  <div id="spin" style="background: rgb(187, 0, 255);">SPIN</div>
-</div>
+    <div id="container">
+        <div id="content">
+            <div id="wheelOfFortune">
+                <canvas id="wheel" width="900px" height="900px" style="transform: rotate(0.890218rad);"></canvas>
+                <div id="spin" style="background: rgb(187, 0, 255);">SPIN</div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript">
         const sectors = [
   {color:"#f82", label:"Stack"},
